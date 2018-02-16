@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace Additional_tasks
 {
 	class Complex
@@ -40,9 +40,24 @@ namespace Additional_tasks
 	
 		public void Simplify()
 		{
+<<<<<<< HEAD
             int lcm = gcd(c1, c2);
             c1 /= lcm;
             c2 /= lcm;
+=======
+			int _a = this.a;
+			int _b = this.b;
+			while (_a > 0 && _b > 0)
+			{
+				if (_a > _b)
+					_a = _a % _b;
+				else
+					_b = _b % _a;
+			}
+			int sums = _a + _b;
+			a /= sums;
+			b /= sums;
+>>>>>>> f40541c7a05e1f1aa58478885a14c3621d39434f
 		}
 	}
     }
