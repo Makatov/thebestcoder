@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace Additional_tasks
 {
 	class Complex
@@ -37,29 +37,7 @@ namespace Additional_tasks
 			c.Simplify();
 			return c;
 		}
-		public static Complex operator -(Complex c1, Complex c2)
-		{
-			int side = lcm(c1.b, c2.b);
-
-			Complex c = new Complex(c1.a * c2.b - c2.a * c1.b, side);
-			c.Simplify();
-			return c;
-		}
-		public static Complex operator *(Complex c1, Complex c2)
-		{
-
-			Complex c = new Complex(c1.a * c2.a, c1.b * c2.b);
-			c.Simplify();
-			return c;
-		}
-		public static Complex operator /(Complex c1, Complex c2)
-		{ 
-
-			Complex c = new Complex(c1.a * c2.b, c1.b * c2.a);
-			c.Simplify();
-			return c;
-		}
-
+	
 		public void Simplify()
 		{
 			int _a = this.a;
@@ -71,9 +49,9 @@ namespace Additional_tasks
 				else
 					_b = _b % _a;
 			}
-			int nod = _a + _b;
-			a /= nod;
-			b /= nod;
+			int sums = _a + _b;
+			a /= sums;
+			b /= sums;
 		}
 	}
     }
