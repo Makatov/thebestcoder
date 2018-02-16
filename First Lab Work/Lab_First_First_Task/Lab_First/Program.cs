@@ -10,7 +10,7 @@ namespace ConsoleApp1
 	{
 		static void Main(string[] args)
 		{
-			string line = Console.ReadLine();//создаем тип строки
+            string line = Console.ReadLine();//создаем тип строки string line = console.readline(); string[] arr = line.Split(' ');
 			string[] arr = line.Split(' ');// создаем и записываем массив через пробел
 			for (int i = 0; i < arr.Length; i++)
 			{
@@ -27,7 +27,7 @@ namespace ConsoleApp1
 						checker = false;// проверка на простое число
 						break;
 					}
-				}
+				} 
 				if (checker == true)
 				{
 					Console.WriteLine(n);// вывод данных
